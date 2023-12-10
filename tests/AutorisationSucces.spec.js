@@ -1,5 +1,9 @@
 const { test, expect } = require('@playwright/test');
 
+const user = require("../user/user");
+const email = user.email;
+const password = user.password;
+
 test("test", async ({ page }) => {
     // Go to https://netology.ru/free/management#/
     await page.goto("https://netology.ru/free/management#/");
