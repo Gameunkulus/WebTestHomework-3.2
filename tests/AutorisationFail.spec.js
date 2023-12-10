@@ -18,7 +18,7 @@ test("test", async ({ page }) => {
   
     await page.getByPlaceholder("Email").fill(email);
     await page.getByPlaceholder("Пароль").fill(password);
-    await page.click("text=Войти");
+    await page.getByTestId(login-submit-btn).click;
 
     await expect(page.getByText("Вы ввели неправильно логин или пароль")).toBeVisible();
 
